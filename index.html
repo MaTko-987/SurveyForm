@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html lang="en">
@@ -9,27 +10,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         
+        <!-- include alertify.css -->
+        <link rel="stylesheet" href="alertify.css">
+
+        <!-- include boostrap theme  -->
+        <link rel="stylesheet" href="bootstrap.css">
+
+      
+        
     </head>
 
     <body>
         <div class="container">
             <header>
                 <h1 id="title">Smart Works Survey Form</h1>
-                <h3 id="description"><i>Lets improve the survey-form together</i></h3>
+                <p id="description"><i>Lets improve the survey-form together</i></p>
                 
             </header>   
                 <section>   
-                    <form id="survey-form" action="/action_page.php" method="POST">
+                    <form id="survey-form" action="/submit" onsubmit="return validateForm()" method="GET"> <!--The onsubmit event occurs when a form is submitted.-->
                             
                                 <!--personal info-->
-                                <label for="fname"><b>First Name</b></label><br>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" ><br><br>
+                                
+                                <label for="fname" id="name-label"><b>First Name</b></label><br>
+                                <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
                                 <label for="lname"><b>Last Name</b></label><br>
                                 <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
-                                <label for="email"><b>E-mail</b></label><br>
-                                <input type="text" id="email" name="email" placeholder="Enter your mail"><br><br>
-                                <label for="age"><b>Age(Optional)</b></label><br>
-                                <input type="text" id="age" name="age" placeholder="Enter your age"><br><br>
+                                <label for="email" id="email-label"><b>E-mail</b></label><br>
+                                <input type="email" id="email" name="email" placeholder="Enter your mail"><br><br>
+                                <label for="age" id="number-label"><b>Age</b></label><br>
+                                <input type="number" id="number" name="age"  placeholder="Enter your age" min="18" max="75"><br><br>
                                 
                                 <!--dropdown1-->
                                 <label for="role"><b>Which option best describes your role?</b></label><br>
@@ -39,7 +49,7 @@
                                     <option value="FullTimeLearner">Full Time Learner</option>
                                     <option value="PerferNotToSay">Perfer not to say</option>
                                     <option value="Other">Other</option>
-                                  </select>
+                                </select>
                                 
                                 <!--radio button -->
                                 <p><b>Would you reccomend Smart Works to a friend?</b></p>
@@ -58,7 +68,7 @@
                                     <option value="Projects">Projects</option>
                                     <option value="Community">Community</option>
                                     <option value="OpenSource">Open Source</option>
-                                  </select>
+                                </select>
 
                                 <!-- checkbox-->
                                 <p><b>What would you like to see improved?(Check all that apply)</b></p>
@@ -85,20 +95,32 @@
                                 
                                 <!--comments textarea-->
                                 <p><b>Any comments or suggestions?</b></p>
-                                    <textarea id="textarea" name="comments" rows="6" cols="45" required>
-                                    Enter your comment here... 
+                                    <textarea id="textarea" name="comments" rows="6" cols="45" placeholder="Enter your text here" required>
                                     </textarea>
                                     </label><br><br>
 
                                 <!--submit button-->
-                                    <input type="submit" id="submit" value="Submit"><br><br>
-                                    
+                                <input type="submit" id="submit" value="Submit"><br><br>
+                                <button type="submit">Submit</button>
                     
                     </form>
                 </section>
             
         </div>
+
+        <!-- include alertify script -->
+        <script src="main.js"></script>
+        <script src="alertify.js"></script>
         
+
     </body>
 
 </html>
+
+
+
+
+
+
+
+

@@ -1,3 +1,7 @@
+*{
+box-sizing:border-box;
+}
+
 body{
     background-image: url('https://images.unsplash.com/photo-1578991624414-276ef23a534f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2085&q=80');
     background-position: center center;
@@ -7,7 +11,6 @@ body{
     background-color:white;
     max-width: 100%;
     height: 100%;
-    
 }
 
 header{
@@ -65,7 +68,7 @@ select{
     width: 10px;  
 }
 
-#name, #lname, #email, #age, #role, #number, #submit {
+#name, #lname, #email, #role, #number, #submit {
     width: 630px;
     border-radius: 10px;
 }
@@ -85,6 +88,15 @@ select{
 }
 
 
+button{
+    width: 630px;
+    border-radius: 10px
+}
+
+button:hover{
+    background-color: yellowgreen;
+}
+
 
 
 @media (min-width: 300px) {
@@ -92,7 +104,7 @@ select{
         max-width: 250px;
     }
 
-    #name, #lname, #email, #age, #submit {
+    #name, #lname, #email, #number, #submit, button {
         width: 200px;
     }
 
@@ -113,17 +125,17 @@ select{
       max-width: 540px;
     }
 
-    #name, #lname, #email, #age, #submit{
+    #name, #lname, #email, #age, #number, #submit, button{
         width: 495px;
     }
 
     #dropdown{
         width: 500px;
     }
+}
+}
 
-  
-}
-}
+
   
   @media (min-width: 768px) {
     .container {
