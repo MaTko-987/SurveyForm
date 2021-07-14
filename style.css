@@ -1,138 +1,181 @@
-body{
-    background-image: url('https://images.unsplash.com/photo-1578991624414-276ef23a534f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2085&q=80');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: cover;
-    background-color:white;
-    max-width: 100%;
-    height: 100%;
+    *{
+        box-sizing: border-box;
+    }
     
-}
-
-header{
-    text-align: center;
-}
-
-form{
-    font-size: 1.2rem;
-}
-
-.container{
-    display: block;
-    margin: auto;
-    max-width: 600px; 
-    opacity: 0.9;
-}
-
-
-
-input{
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid white;
-    font-size:1rem;
-}
-
-select{
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid white;
-    font-size:1rem;
-}
-
-#title{
-    font-size: 2.5rem;
-}
-
-#description{
-    font-size:1.5rem;
-}
-
-#survey-form{
-    background-color: red;
-    margin-top: 10px;
-    padding-top: 20px;
-    padding-left: 20px;
-    border-radius: 10px;
-    text-align:left;  
-    margin-bottom: 50px; 
-}
-
-#radio {
-    text-align: left;
-    height: 10px;
-    width: 10px;  
-}
-
-#name, #lname, #email, #age, #role, #number, #submit {
-    width: 630px;
-    border-radius: 10px;
-}
-
-#dropdown{
-    width: 490px;
-    border-radius: 10px;
-}
-
-#checkbox{
-    height: 10px;
-}
-
-#textarea{
-   width: 490px;
-   border-radius: 10px;
-}
-
-
-
-
-@media (min-width: 300px) {
-    .container {
-        max-width: 250px;
+    body{
+        background-image: url('https://images.unsplash.com/photo-1578991624414-276ef23a534f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2085&q=80');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: cover;
+        background-color:white;
+        max-width: 100%;
+        height: 100%;
     }
-
-    #name, #lname, #email, #age, #submit {
-        width: 200px;
+    
+    header{
+        text-align: center;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 500;
     }
-
+    
+    form{
+        font-size: 1.2rem;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        border: 2px solid whitesmoke;
+    }
+    
+    .container{
+        display: block;
+        margin: auto;
+        max-width: 600px; 
+        opacity: 0.9;
+    }
+    
+    
+    input{
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 1rem;
+    }
+    
+    select{  
+    /* select tag influences behavior of select part of dropdown list*/
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 1rem;
+    }
+    
+    #title{
+        font-size: 3rem;
+    }
+    
+    #description{
+        font-size: 1.5rem;
+    }
+    
+    #survey-form{
+        background-color: red;
+        margin-top: 5px;
+        padding-top: 20px;
+        padding-left: 20px;
+        border-radius: 10px;
+        text-align:left;  
+        margin-bottom: 50px; 
+    }
+    
+    #radio {
+        text-align: left;
+        height: 10px;
+        width: 10px;  
+        cursor: pointer;
+    }
+    
+    #name, #lname, #email, #role, #number, #submit {
+        width: 630px;
+        border-radius: 10px;
+    }
+    
     #dropdown{
-        width: 200px;
-    }
-
-    #textarea{
-        max-width: 190px;
+        width: 490px;
+        border-radius: 10px;
+        cursor: pointer;
     }
     
+    #checkbox{
+        height: 10px;
+        cursor: pointer;
+    }
 
    
+    
+    #textarea{
+       width: 490px;
+       border-radius: 10px;
+    }
+    
+    
+    button{
+        width: 630px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+        border: 1px solid red;
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+    }
+    
+    button:hover{
+        background-color: yellow;
+        color: black;
+        transition-duration: 0.5s;
+        font-weight: 700;     
+    }
+
+    
+    small {
+        color: yellow;
+        font-size: 0.75rem;
+    }
+
+    .form-control small{
+        visibility: hidden;
+    }
+
+    textarea {
+        resize: none;
+        margin: auto;
+        width: 100%;
+        box-sizing:content-box;
+      }
+    
+    
+    
+    @media (min-width: 300px) {
+        .container {
+            max-width: 250px;
+        }
+    
+        #name, #lname, #email, #number, #submit, button {
+            width: 200px;
+        }
+    
+        #dropdown{
+            width: 200px;
+        }
+    
+        #textarea{
+            max-width: 190px;
+        }
+        
+    
+       
+    }
+    
+    @media (min-width: 576px) {
+            .container {
+            max-width: 540px;
+            }
+        
+            #name, #lname, #email, #age, #number, #submit, button{
+                width: 495px;
+            }
+        
+            #dropdown{
+                width: 500px;
+            }
+        }
 }
-
-@media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-
-    #name, #lname, #email, #age, #submit{
-        width: 495px;
-    }
-
-    #dropdown{
-        width: 500px;
-    }
-
-  
-}
-}
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-
-
-
-
-
-
+    
+    
+      
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+    
