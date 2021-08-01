@@ -12,10 +12,7 @@
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600&display=swap" rel="stylesheet">
-
-      
-        
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;600&display=swap" rel="stylesheet"> 
     </head>
 
     <body>
@@ -49,6 +46,7 @@
                                 <input type="number" id="number" name="age"  placeholder="Enter your age" min="18" max="75">
                                 <small>Error</small>
                                 </div>
+
                                 <!--dropdown1-->
                                 <label for="role">Which option best describes your role?</label><br>
                                 <select name="role" id="dropdown" placeholder="Select current role">
@@ -60,13 +58,17 @@
                                 </select>
                                 
                                 <!--radio button -->
+                                <div class="form-control">
                                 <p>Would you reccomend Smart Works to a friend?</p>
                                 <input type="radio" id="radio" name="gender" value="male">
                                 <label for="answer1">Yes</label><br>
                                 <input type="radio" id="radio" name="gender" value="female">
                                 <label for="answer2">Not sure</label><br>
                                 <input type="radio" id="radio" name="gender" value="other">
-                                <label for="answer3">No</label><br><br>
+                                <label for="answer3">No</label><br>
+                                <small>Error</small>
+                                <br><br>
+                                </div>
                                 
                                 
                                 <!--dropdown2-->
@@ -115,7 +117,7 @@
             
         </div>
 
-        <!-- include alertify script -->
+        
         <script src="main.js"></script>
         
     </body>

@@ -47,9 +47,11 @@
         border: 1px solid white;
         font-size: 1rem;
     }
+
     
     #title {
         font-size: 3rem;
+        text-shadow: 1px 2px red;    
     }
     
     #description {
@@ -71,6 +73,18 @@
         height: 10px;
         width: 10px;  
         cursor: pointer;
+    }
+
+    label > input[type="radio"] {
+        display: none;
+    }
+
+    label > input[type="radio"] + *::before {
+        background-color: white;
+    }
+
+    label > input[type="radio"]:checked + *::before {
+        background-color: yellow;
     }
     
     #name, #lname, #email, #role, #number, #submit {

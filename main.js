@@ -22,23 +22,26 @@ function validateInput(){
   
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
-    window.scrollTo({ top: 0, behavior: `smooth` }); 
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
      onSuccess(firstName, "Very good!");
   }
 
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } else { 
     onSuccess(lastName, "Nice!");
   }
 
    if(email.value.trim()===""){
     onError(email, "Your e-mail is missing!");
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
 
     if(!isValidEmail(email.value.trim())){
       onError(email,"Email is not valid");
+      window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
       onSuccess(email, "Great email!");
   }
@@ -46,13 +49,17 @@ function validateInput(){
 
   if(number.value.trim()===""){
     onError(number, "Write your age here!"); 
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }else {
     onSuccess(number, "That's a nice number!");
   }
 
+  if (radio.checked === false){ 
+    onError(radio, "Choose your answer!");
+  } else {
+    onSuccess(radio, "Thank you!");
+  }
 }
-
-
 
 
 document.querySelector("button").addEventListener("click", (event)=>{
@@ -87,6 +94,4 @@ function onError(input, message){
 function isValidEmail(email){
   return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-
-
 
