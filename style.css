@@ -2,7 +2,7 @@
         box-sizing: border-box;
     }
     
-    body{
+    body {
         background-image: url('https://images.unsplash.com/photo-1578991624414-276ef23a534f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2085&q=80');
         background-position: center center;
         background-repeat: no-repeat;
@@ -13,20 +13,20 @@
         height: 100%;
     }
     
-    header{
+    header {
         text-align: center;
         font-family: 'Kanit', sans-serif;
         font-weight: 500;
     }
     
-    form{
+    form {
         font-size: 1.2rem;
         font-family: 'Kanit', sans-serif;
         font-weight: 400;
         border: 2px solid whitesmoke;
     }
     
-    .container{
+    .container {
         display: block;
         margin: auto;
         max-width: 600px; 
@@ -34,30 +34,29 @@
     }
     
     
-    input{
+    input {
         height: 40px;
         border-radius: 5px;
         border: 1px solid white;
         font-size: 1rem;
     }
     
-    select{  
-    /* select tag influences behavior of select part of dropdown list*/
+    select {  
         height: 40px;
         border-radius: 5px;
         border: 1px solid white;
         font-size: 1rem;
     }
     
-    #title{
+    #title {
         font-size: 3rem;
     }
     
-    #description{
+    #description {
         font-size: 1.5rem;
     }
     
-    #survey-form{
+    #survey-form {
         background-color: red;
         margin-top: 5px;
         padding-top: 20px;
@@ -79,26 +78,25 @@
         border-radius: 10px;
     }
     
-    #dropdown{
+    #dropdown {
         width: 490px;
         border-radius: 10px;
         cursor: pointer;
     }
     
-    #checkbox{
+    #checkbox {
         height: 10px;
         cursor: pointer;
     }
 
    
-    
-    #textarea{
+    #textarea {
        width: 490px;
        border-radius: 10px;
     }
     
     
-    button{
+    button {
         width: 630px;
         border-radius: 10px;
         padding: 10px;
@@ -117,9 +115,25 @@
     }
 
     
+    input:focus {
+        outline: none;
+        background-color:white;
+        border: 1.5px solid rgb(55, 0, 255);
+    }
+
+    
     small {
         color: yellow;
-        font-size: 0.75rem;
+        font-size: 0.95rem;
+        text-shadow: 1px 2px black;
+    }
+
+    .form-control.success input{
+        border: 2px solid black;
+    }
+
+    .form-control.error input{
+        border: 3px solid yellow;
     }
 
     .form-control small{
@@ -130,7 +144,7 @@
         resize: none;
         margin: auto;
         width: 100%;
-        box-sizing:content-box;
+        box-sizing: content-box;
       }
     
     
@@ -171,8 +185,7 @@
         }
 }
     
-    
-      
+     
       @media (min-width: 768px) {
         .container {
           max-width: 720px;

@@ -9,12 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         
-        <!-- include alertify.css -->
-        <link rel="stylesheet" href="alertify.css">
-
-        <!-- include boostrap theme  -->
-        <link rel="stylesheet" href="bootstrap.css">
-
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,21 +26,29 @@
                 
             </header>   
                 <section>   
-                    <form class="form" id="survey-form" action="/submit" onsubmit="return validateForm()" method="GET"> <!--The onsubmit event occurs when a form is submitted.-->
+                    <form class="form" id="survey-form" action="/submit" onsubmit="return validateForm()" method="POST"> <!--The onsubmit event occurs when a form is submitted.-->
                             
                                 <!--personal info-->
                                 <div class="form-control">
                                 <label for="fname" id="name-label">First Name</label>
                                 <input type="text" id="name" name="name" placeholder="Enter your name">
-                                <small>Erorr</small>
+                                <small>Error</small>
                                 </div>
+                                <div class="form-control">
                                 <label for="lname">Last Name</label><br>
-                                <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
+                                <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                                <small>Error</small>
+                                </div>
+                                <div class="form-control">
                                 <label for="email" id="email-label">E-mail</label><br>
-                                <input type="email" id="email" name="email" placeholder="Enter your mail"><br><br>
+                                <input type="email" id="email" name="email" placeholder="Enter your mail">
+                                <small>Error</small>
+                                </div>
+                                <div class="form-control">
                                 <label for="age" id="number-label">Age</label><br>
-                                <input type="number" id="number" name="age"  placeholder="Enter your age" min="18" max="75"><br><br>
-                                
+                                <input type="number" id="number" name="age"  placeholder="Enter your age" min="18" max="75">
+                                <small>Error</small>
+                                </div>
                                 <!--dropdown1-->
                                 <label for="role">Which option best describes your role?</label><br>
                                 <select name="role" id="dropdown" placeholder="Select current role">
@@ -106,7 +108,7 @@
 
                                 <!--submit button-->
                                 <!--<input type="submit" id="submit" value="Submit"><br><br>-->
-                                <button type="submit">Submit</button>
+                                <button onclick="myFunction()" type="submit">Submit</button>
                     
                     </form>
                 </section>
@@ -115,9 +117,7 @@
 
         <!-- include alertify script -->
         <script src="main.js"></script>
-        <script src="alertify.js"></script>
         
-
     </body>
 
 </html>
