@@ -29,19 +29,18 @@ function validateInput(){
 
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    lastName.scrollIntoView();
   } else { 
     onSuccess(lastName, "Nice!");
   }
 
    if(email.value.trim()===""){
     onError(email, "Your e-mail is missing!");
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    email.scrollIntoView();
   } else {
-
     if(!isValidEmail(email.value.trim())){
       onError(email,"Email is not valid");
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      email.scrollIntoView();
   } else {
       onSuccess(email, "Great email!");
   }
@@ -49,13 +48,14 @@ function validateInput(){
 
   if(number.value.trim()===""){
     onError(number, "Write your age here!"); 
-    window.scrollTo({top: 0, behavior: 'smooth'});
+   window.scrollTo({top: 0, behavior: 'smooth'});
   }else {
     onSuccess(number, "That's a nice number!");
   }
 
   if (radio.checked === false){ 
     onError(radio, "Choose your answer!");
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
     onSuccess(radio, "Thank you!");
   }
@@ -95,3 +95,8 @@ function isValidEmail(email){
   return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
+
+
+
+
+  
