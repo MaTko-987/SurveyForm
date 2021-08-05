@@ -75,17 +75,7 @@
         cursor: pointer;
     }
 
-    label > input[type="radio"] {
-        display: none;
-    }
-
-    label > input[type="radio"] + *::before {
-        background-color: white;
-    }
-
-    label > input[type="radio"]:checked + *::before {
-        background-color: yellow;
-    }
+  
     
     #name, #lname, #email, #role, #number, #submit {
         width: 630px;
@@ -142,8 +132,10 @@
         text-shadow: 1px 2px black;
     }
 
+
     .form-control.success input{
         border: 2px solid black;
+        
     }
 
     .form-control.error input{
@@ -196,7 +188,7 @@
             #dropdown{
                 width: 500px;
             }
-        }
+    }
 }
     
      
@@ -206,3 +198,8 @@
         }
       }
     
+          
+      
+
+      
+      

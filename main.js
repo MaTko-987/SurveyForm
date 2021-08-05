@@ -1,5 +1,5 @@
 
-/*variables*/
+/*Variables*/
 const title = document.getElementById('title');
 const surveyForm = document.getElementById('survey-form');
 const description = document.getElementById('description');
@@ -23,16 +23,19 @@ function validateInput(){
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
     window.scrollTo({top: 0, behavior: 'smooth'});
-  } else {
-     onSuccess(firstName, "Very good!");
+  } 
+    else {
+     onSuccess(firstName, '&#10004'); 
   }
+
 
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
     lastName.scrollIntoView();
   } else { 
-    onSuccess(lastName, "Nice!");
+    onSuccess(lastName, '&#10004');
   }
+
 
    if(email.value.trim()===""){
     onError(email, "Your e-mail is missing!");
@@ -42,15 +45,15 @@ function validateInput(){
       onError(email,"Email is not valid");
       email.scrollIntoView();
   } else {
-      onSuccess(email, "Great email!");
+      onSuccess(email, '&#10004'); /*was a great email */
   }
-}
+  }
 
   if(number.value.trim()===""){
     onError(number, "Write your age here!"); 
    window.scrollTo({top: 0, behavior: 'smooth'});
   }else {
-    onSuccess(number, "That's a nice number!");
+    onSuccess(number, '&#10004');
   }
 
   if (radio.checked === false){ 
@@ -59,29 +62,34 @@ function validateInput(){
   } else {
     onSuccess(radio, "Thank you!");
   }
-}
 
+  if(checkbox.checked === false){
+    onError(checkbox, "Select a option!");
+    window.scrollIntoView();
+  }
+  else{
+    onSuccess(checkbox, "Good choice!");
+  }
+}
 
 document.querySelector("button").addEventListener("click", (event)=>{
     event.preventDefault(); 
     validateInput(); 
   }); 
 
-
-function onSuccess(input, message){
+/*Succes function*/
+function onSuccess(input, symbol){ 
 
     let parent = input.parentElement; 
     let errorMessage = parent.querySelector("small"); 
     errorMessage.style.visibility= "visible"; 
-    errorMessage.style.fontStyle = "italic"; 
-    errorMessage.style.fontFamily = "monospace";
-    errorMessage.innerText = message;
+    errorMessage.innerHTML = symbol; 
     parent.classList.remove("error");
     parent.classList.add("success");
   }
 
+  /* Error function */
 function onError(input, message){
-
     let parent = input.parentElement; 
     let errorMessage = parent.querySelector("small"); 
     errorMessage.style.visibility="visible"; 
@@ -91,12 +99,27 @@ function onError(input, message){
       
 }
 
+/* Valid e-mail function */
 function isValidEmail(email){
   return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
 
+/* Check letters function */
+function allLetter(input) {
+  var letters = /^[a-z]*$/i;
+  if (!input.value.match(letters)) {
+      alert('Please input letters only');
+  }
+}
 
+/* Check numbers function */
+function allNumber(input){
+  var numbers = /^\d+$/;
+  if(!input.value.match(numbers)){
+    alert('Please input numbers only');
+  }
+}
 
 
   
