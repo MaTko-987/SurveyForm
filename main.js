@@ -8,7 +8,7 @@ const firstName = document.getElementById('name');
 const lastName = document.getElementById('lname');
 const age = document.getElementById('age');
 const email = document.getElementById('email');
-const role = document.getElementById('dropdown');
+const dropdown = document.getElementById('dropdown');
 const radio = document.getElementById('radio');
 const checkbox = document.getElementById('checkbox');
 const textarea = document.getElementById('textarea');
@@ -45,9 +45,10 @@ function validateInput(){
       onError(email,"Email is not valid");
       email.scrollIntoView();
   } else {
-      onSuccess(email, '&#10004'); /*was a great email */
+      onSuccess(email, '&#10004'); 
   }
   }
+
 
   if(number.value.trim()===""){
     onError(number, "Write your age here!"); 
@@ -60,17 +61,20 @@ function validateInput(){
     onError(radio, "Choose your answer!");
     window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
-    onSuccess(radio, "Thank you!");
+    onSuccess(radio, '&#10004');
   }
+
 
   if(checkbox.checked === false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
   }
   else{
-    onSuccess(checkbox, "Good choice!");
+    onSuccess(checkbox, '&#10004');
   }
+
 }
+
 
 document.querySelector("button").addEventListener("click", (event)=>{
     event.preventDefault(); 
@@ -113,13 +117,19 @@ function allLetter(input) {
   }
 }
 
-/* Check numbers function */
-function allNumber(input){
-  var numbers = /^\d+$/;
-  if(!input.value.match(numbers)){
-    alert('Please input numbers only');
-  }
+
+/*submit confirmation function */
+function confirmSubmit() {
+  var agree = confirm("Are you sure you wish to continue?");
+  var confirmed = validateInput();
+  if (agree || confirmed == true){
+    location.replace("submit_confirmation.html")}
+  else{
+  return false ;}
 }
+
+
+
 
 
   

@@ -8,7 +8,6 @@
         <meta name="author" content="Ma Tko">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-        
         <!--Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,8 +15,10 @@
     </head>
 
     <body>
+        
         <div class="container">
             <header>
+               
                 <h1 id="title">Smart Works Survey Form</h1>
                 <p id="description">Lets improve the survey-form together</p>
                 
@@ -70,13 +71,12 @@
                                     <input type="radio" id="radio" name="gender" value="other">
                                     <label for="answer3">No</label><br>
                                     <small>Error</small>
-                                    <br>
                                 </div>
                                 
                                 
                                 <!--dropdown2-->
                                 
-                                <label for="role">What is your favorite feature od Smart works?</label><br>
+                                <label for="role">What is your favorite Smart works feature?</label><br>
                                 <select name="role" id="dropdown" placeholder="Select an option">
                                     <option value="Challenges">Challenges</option>
                                     <option value="Projects">Projects</option>
@@ -118,7 +118,7 @@
 
                                 <!--submit button-->
                                 <!--<input type="submit" id="submit" value="Submit"><br><br>-->
-                                <button onclick="myFunction()" type="submit">Submit</button>
+                                <button onclick="confirmSubmit()" type="submit">Submit</button>
                     
                     </form>
                 </section>

@@ -29,8 +29,8 @@
     .container {
         display: block;
         margin: auto;
-        max-width: 600px; 
-        opacity: 0.9;
+        max-width: 700px; 
+        opacity: 0.90;
     }
     
     
@@ -109,13 +109,16 @@
         background-color: orange;
         color: white;
         cursor: pointer;
+        transition-duration: 0.5s;;
     }
     
     button:hover{
         background-color: yellow;
         color: black;
         transition-duration: 0.5s;
-        font-weight: 700;     
+        font-weight: 700; 
+        letter-spacing: 3px;
+        
     }
 
     
@@ -198,8 +201,35 @@
         }
       }
     
-          
+        
+      /*
+      .box {
+        float: left;
+        border: 10px solid black;
+        height: 110px;
+        width: 250px;
+        text-align: center;
+        line-height: 85px;
+        color: red;
+        font-family: arial;
+        font-weight: bold;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-image: inherit;
+        
+      }
       
+      
+      
+      
+      span {
+        font-size: 5rem;
+       padding-left: 15px;
+       background: inherit;
+        
+      }
+        
+      */
 
       
       
