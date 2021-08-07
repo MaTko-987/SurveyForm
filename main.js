@@ -38,15 +38,15 @@ function validateInput(){
 
 
    if(email.value.trim()===""){
-    onError(email, "Your e-mail is missing!");
-    email.scrollIntoView();
-  } else {
-    if(!isValidEmail(email.value.trim())){
-      onError(email,"Email is not valid");
+      onError(email, "Your e-mail is missing!");
       email.scrollIntoView();
-  } else {
-      onSuccess(email, '&#10004'); 
-  }
+    } else {
+      if(!isValidEmail(email.value.trim())){
+        onError(email,"Email is not valid");
+        email.scrollIntoView();
+    } else {
+        onSuccess(email, '&#10004'); 
+    }
   }
 
 
@@ -127,9 +127,6 @@ function confirmSubmit() {
   else{
   return false ;}
 }
-
-
-
 
 
   
