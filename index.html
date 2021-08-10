@@ -24,7 +24,7 @@
                 
             </header>   
                 <section>   
-                    <form class="form" id="survey-form" action="/submit" onsubmit="return validateForm()" method="POST"> <!--The onsubmit event occurs when a form is submitted.-->
+                    <form id="survey-form" action="/submit" onsubmit="return validateForm()" method="POST"> <!--The onsubmit event occurs when a form is submitted.-->
                             
                                 <!--personal info-->
                                 <div class="form-control">
@@ -64,11 +64,11 @@
                                 <!--radio button -->
                                 <div class="form-control">
                                     <p>Would you reccomend Smart Works to a friend?</p>
-                                    <input type="radio" id="radio" name="gender" value="male">
+                                    <input type="radio" id="radio" name="choice" value="male">
                                     <label for="answer1">Yes</label><br>
-                                    <input type="radio" id="radio" name="gender" value="female">
+                                    <input type="radio" id="radio" name="choice" value="female">
                                     <label for="answer2">Not sure</label><br>
-                                    <input type="radio" id="radio" name="gender" value="other">
+                                    <input type="radio" id="radio" name="choice" value="other">
                                     <label for="answer3">No</label><br>
                                     <small>Error</small>
                                 </div>
@@ -90,8 +90,8 @@
                                     <p>What would you like to see improved?(Check all that apply)</p>
                                     <input type="checkbox" id="checkbox" name="option1" value="answer1">
                                     <label for="option1">Smart Projects</label><br>
-                                    <input type="checkbox" id="checkbox" name="option2" value="answer2">
-                                    <label for="option2">Fast Projects</label><br>
+                                    <input type="checkbox" id="checkbox" name="option1" value="answer2">
+                                    <label for="option1">Fast Projects</label><br>
                                     <input type="checkbox" id="checkbox" name="option3" value="answer3">
                                     <label for="option3">Data Visualization</label><br>
                                     <input type="checkbox" id="checkbox" name="option4" value="answer4">

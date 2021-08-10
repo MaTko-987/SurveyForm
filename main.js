@@ -57,7 +57,8 @@ function validateInput(){
     onSuccess(number, '&#10004');
   }
 
-  if (radio.checked === false){ 
+  
+  if (this.checked == false){ 
     onError(radio, "Choose your answer!");
     window.scrollTo({top: 0, behavior: 'smooth'});
   } else {
@@ -65,7 +66,7 @@ function validateInput(){
   }
 
 
-  if(checkbox.checked === false){
+  if(this.checked == false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
   }

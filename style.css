@@ -202,10 +202,8 @@
       }
       
 
-      /* confirmation-html-styles*/
 
-
-      
+/* confirmation-html-styles*/      
 .container_box {
     display: block;
     margin: auto;
@@ -247,7 +245,7 @@ span {
     background-color: red;  
 }
 
-p {
+.thanks_message{
     color: black;
     font-size: 1rem;
     background: red;
