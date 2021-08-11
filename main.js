@@ -15,9 +15,6 @@ const textarea = document.getElementById('textarea');
 const submit = document.getElementById('submit');
 
 
-
-
-
 /*input validation function*/
 function validateInput(){
 
@@ -173,7 +170,7 @@ function confirmSubmit() {
     location.replace("submit_confirmation.html")}
   else{
   return false ;}
-  
+
 }
 
   
