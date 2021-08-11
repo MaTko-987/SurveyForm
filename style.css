@@ -202,7 +202,6 @@
       }
       
 
-
 /* confirmation-html-styles*/      
 .container_box {
     display: block;
@@ -218,8 +217,7 @@
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    opacity: 1;
-    box-shadow: 3px 1px black;
+    box-shadow: 1px 1px black;
 }
 
 
@@ -233,9 +231,8 @@
     font-weight: bold;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    text-shadow: 1px 3px yellow;
 }
-  
+
   
 span {
     font-size: 5rem;
@@ -245,14 +242,16 @@ span {
 }
 
 .thanks_message{
+    font-family: 'Kanit', sans-serif;
     color: black;
     font-size: 1rem;
     background: red;
 }
-    
 
+    
 .title {
     font-size: 3rem;
     margin-top: 100px;
     margin-bottom: 20px; 
 }
+

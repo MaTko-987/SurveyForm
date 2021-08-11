@@ -16,10 +16,13 @@ const submit = document.getElementById('submit');
 
 
 
-/*input validation*/
+
+
+/*input validation function*/
 function validateInput(){
 
   
+  /*first name validation */
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -37,6 +40,8 @@ function validateInput(){
   }
 
 
+
+  /*last name validation */
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
     lastName.scrollIntoView();
@@ -54,6 +59,7 @@ function validateInput(){
   }
 
 
+  /*email validation */
    if(email.value.trim()===""){
       onError(email, "Your e-mail is missing!");
       email.scrollIntoView();
@@ -67,34 +73,39 @@ function validateInput(){
   }
 
 
+
+  /*age validation */
   if(age.value.trim()===""){
     onError(age, "Write your age here!"); 
    window.scrollTo({top: 0, behavior: 'smooth'});
 
   } else if (age.value < 18){
     onError(number, "You are to young!");
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   } else if (age.value > 60){
     onError(number, "You are too old!");
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   } else {
     onSuccess(number, '&#10004');
   }
 
-  
+  /*radio button validation */
   if (this.checked == false){ 
     onError(radio, "Choose your answer!");
     window.scrollTo({top: 0, behavior: 'smooth'});
+
   } else {
     onSuccess(radio, '&#10004');
   }
 
-
+  /*checkbox validation */
   if(this.checked == false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
-  }
-  else{
+  
+  } else {
     onSuccess(checkbox, '&#10004');
   }
 
@@ -106,6 +117,8 @@ document.querySelector("button").addEventListener("click", (event)=>{
     validateInput(); 
   }); 
 
+
+
 /*Succes function*/
 function onSuccess(input, symbol){ 
 
@@ -115,53 +128,52 @@ function onSuccess(input, symbol){
     errorMessage.innerHTML = symbol; 
     parent.classList.remove("error");
     parent.classList.add("success");
+
   }
+
+
 
   /* Error function */
 function onError(input, message){
+
     let parent = input.parentElement; 
     let errorMessage = parent.querySelector("small"); 
     errorMessage.style.visibility="visible"; 
     errorMessage.innerText = message;
     parent.classList.add("error");
-    parent.classList.remove("success");
-      
+    parent.classList.remove("success");  
+
 }
 
 /* Valid e-mail function */
 function isValidEmail(email){
+
   return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+
 }
 
 
 /* Check letters function */
 function allLetter(input) {
+
   var letters = /^[a-z]*$/i;
   if (!input.value.match(letters)) {
       alert('Please input letters only');
   }
+
 }
 
-/* 
-function allNumbers() {
 
-  if (isNaN(age)){  
-    document.getElementById("numloc").innerHTML="Enter Numeric value only";  
-    return false;  
-  }else{  
-    return true;  
-}
-
-*/
-/*submit confirmation function 
+/*submit confirmation function */
 function confirmSubmit() {
-  var agree = confirm("Are you sure you wish to continue?");
+  
   var confirmed = validateInput();
-  if (agree || confirmed == true){
+  if (confirmed == true){
+   confirm("Are you sure you wish to continue?");
     location.replace("submit_confirmation.html")}
   else{
   return false ;}
+  
 }
 
-*/
   
