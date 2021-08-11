@@ -23,8 +23,16 @@ function validateInput(){
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
     window.scrollTo({top: 0, behavior: 'smooth'});
-  } 
-    else {
+
+  } else if(firstName.value.length < 2){
+    onError(firstName, "Your name is too short!")
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  } else if(firstName.value.length > 10){
+    onError(firstName, "Your name is too long!")
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  
+  } else {
      onSuccess(firstName, '&#10004'); 
   }
 
@@ -32,6 +40,15 @@ function validateInput(){
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
     lastName.scrollIntoView();
+
+  } else if(lastName.value.length < 2){
+    onError(lastName, "Your last name is too short!")
+    lastName.scrollIntoView();
+
+  } else if(lastName.value.length > 10){
+    onError(lastName, "Your last name is too long!")
+    lastName.scrollIntoView();
+  
   } else { 
     onSuccess(lastName, '&#10004');
   }
