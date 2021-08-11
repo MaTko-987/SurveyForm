@@ -6,7 +6,7 @@ const description = document.getElementById('description');
 const errorElement = document.getElementById('error');
 const firstName = document.getElementById('name');
 const lastName = document.getElementById('lname');
-const age = document.getElementById('age');
+const age = document.getElementById('number');
 const email = document.getElementById('email');
 const dropdown = document.getElementById('dropdown');
 const radio = document.getElementById('radio');
@@ -67,10 +67,17 @@ function validateInput(){
   }
 
 
-  if(number.value.trim()===""){
-    onError(number, "Write your age here!"); 
+  if(age.value.trim()===""){
+    onError(age, "Write your age here!"); 
    window.scrollTo({top: 0, behavior: 'smooth'});
-  }else {
+
+  } else if (age.value < 18){
+    onError(number, "You are to young!");
+
+  } else if (age.value > 60){
+    onError(number, "You are too old!");
+
+  } else {
     onSuccess(number, '&#10004');
   }
 
@@ -135,8 +142,18 @@ function allLetter(input) {
   }
 }
 
+/* 
+function allNumbers() {
 
-/*submit confirmation function */
+  if (isNaN(age)){  
+    document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+    return false;  
+  }else{  
+    return true;  
+}
+
+*/
+/*submit confirmation function 
 function confirmSubmit() {
   var agree = confirm("Are you sure you wish to continue?");
   var confirmed = validateInput();
@@ -146,5 +163,5 @@ function confirmSubmit() {
   return false ;}
 }
 
-
+*/
   

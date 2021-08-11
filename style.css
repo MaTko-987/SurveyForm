@@ -219,7 +219,6 @@
     border-radius: 10px;
     text-align: center;
     opacity: 1;
-    border: 1px solid black;
     box-shadow: 3px 1px black;
 }
 
@@ -251,3 +250,9 @@ span {
     background: red;
 }
     
+
+.title {
+    font-size: 3rem;
+    margin-top: 100px;
+    margin-bottom: 20px; 
+}
