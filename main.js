@@ -9,10 +9,17 @@ const lastName = document.getElementById('lname');
 const age = document.getElementById('number');
 const email = document.getElementById('email');
 const dropdown = document.getElementById('dropdown');
+
 const radio = document.getElementById('radio');
+
+
+
 const checkbox = document.getElementById('checkbox');
+const checkbox1 = document.getElementById('checkbox1');
 const textarea = document.getElementById('textarea');
 const submit = document.getElementById('submit');
+
+
 
 
 /*input validation function*/
@@ -88,22 +95,26 @@ function validateInput(){
     onSuccess(number, '&#10004');
   }
 
-  /*radio button validation */
+  /*radio button validation*/
   if (this.checked == false){ 
-    onError(radio, "Choose your answer!");
+    onError(radio, "Choose your answer!"); 
     window.scrollTo({top: 0, behavior: 'smooth'});
 
   } else {
     onSuccess(radio, '&#10004');
   }
 
-  /*checkbox validation */
-  if(this.checked == false){
+  /*checkbox validation*/
+  if(checkbox.checked == false || checkbox1.checked == false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
-  
+
+  } else if(checkbox1.checked == false){
+    onError(checkbox1, "Select a option!");
+    window.scrollIntoView();
   } else {
     onSuccess(checkbox, '&#10004');
+    onSuccess(checkbox1, '&#10004');
   }
 
 }
@@ -161,16 +172,13 @@ function allLetter(input) {
 }
 
 
+
 /*submit confirmation function */
 function confirmSubmit() {
-  
+  var agree = "Are you sure you wish to continue?";
   var confirmed = validateInput();
-  if (confirmed == true){
-   confirm("Are you sure you wish to continue?");
-    location.replace("submit_confirmation.html")}
+  if (agree || confirmed == true){
+    location.replace("submit_confirmation.html");}
   else{
   return false ;}
-
 }
-
-  
