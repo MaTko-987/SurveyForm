@@ -105,16 +105,13 @@ function validateInput(){
   }
 
   /*checkbox validation*/
-  if(checkbox.checked == false || checkbox1.checked == false){
+  if(this.checked == false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
-
-  } else if(checkbox1.checked == false){
-    onError(checkbox1, "Select a option!");
-    window.scrollIntoView();
+    
   } else {
     onSuccess(checkbox, '&#10004');
-    onSuccess(checkbox1, '&#10004');
+    
   }
 
 }
@@ -173,7 +170,7 @@ function allLetter(input) {
 
 
 
-/*submit confirmation function */
+/*submit confirmation function*/
 function confirmSubmit() {
   var agree = "Are you sure you wish to continue?";
   var confirmed = validateInput();
