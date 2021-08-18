@@ -9,13 +9,8 @@ const lastName = document.getElementById('lname');
 const age = document.getElementById('number');
 const email = document.getElementById('email');
 const dropdown = document.getElementById('dropdown');
-
 const radio = document.getElementById('radio');
-
-
-
 const checkbox = document.getElementById('checkbox');
-const checkbox1 = document.getElementById('checkbox1');
 const textarea = document.getElementById('textarea');
 const submit = document.getElementById('submit');
 
