@@ -26,7 +26,7 @@
                 
             </header>   
                 <section>   
-                    <form id="survey-form" action="/submit" onsubmit="return validateForm()" method="POST"> <!--The onsubmit event occurs when a form is submitted.-->
+                    <form id="survey-form" action="/submit" method="POST"> <!--The onsubmit event occurs when a form is submitted.-->
                             
 
                                 <!--personal info-->
@@ -69,7 +69,7 @@
                                 <!--radio button -->
                                 <div class="form-control">
                                     <p>Would you reccomend Smart Works to a friend?</p>
-                                    <input type="radio" id="radio" name="choice" value="male" onclick="onClick()">
+                                    <input type="radio" id="radio" name="choice" value="male">
                                     <label for="radio">Yes</label><br>
                                     <input type="radio" id="radio1" name="choice" value="female">
                                     <label for="radio1">Not sure</label><br>
@@ -117,16 +117,13 @@
 
                                 
                                 <!--comments textarea-->
-
-                                
-                                
                                 <p>Any comments or suggestions?</p>
                                     <textarea id="textarea" name="comments" rows="6" cols="100" placeholder="Have suggestions? Write them down over here!"></textarea>
                                     <br><br>
                                 
                                 <!--submit button-->
-                                <button onclick="confirmSubmit()" type="submit">Submit</button>
-
+                                <button type="submit" onclick="confirmSubmit()">Submit</button>
+                               
                     </form>
                 </section>
             

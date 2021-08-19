@@ -167,9 +167,9 @@ function allLetter(input) {
 
 /*submit confirmation function*/
 function confirmSubmit() {
-  var agree = "Are you sure you wish to continue?";
+  var agree = confirm("Redirecting ...")
   var confirmed = validateInput();
-  if (agree || confirmed == true){
+  if (agree || confirmed === true){
     location.replace("submit_confirmation.html");}
   else{
   return false ;}
