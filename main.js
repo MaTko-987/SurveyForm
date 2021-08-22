@@ -9,11 +9,27 @@ const lastName = document.getElementById('lname');
 const age = document.getElementById('number');
 const email = document.getElementById('email');
 const dropdown = document.getElementById('dropdown');
+
 const radio = document.getElementById('radio');
+const radio1 = document.getElementById('radio1');
+const radio2 = document.getElementById('radio2');
+
+
+
 const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+const checkbox = document.getElementById('checkbox');
+
+
 const textarea = document.getElementById('textarea');
 const submit = document.getElementById('submit');
 
+const confirmed = validateInput();
 
 
 
@@ -90,17 +106,26 @@ function validateInput(){
     onSuccess(number, '&#10004');
   }
 
+ 
   /*radio button validation*/
-  if (this.checked == false){ 
+
+  if(radio.checked){
+    onSuccess(radio, '&#10004');
+  
+  } else if (radio1.checked){
+    onSuccess(radio1, '&#10004');
+
+  } else if (radio2.checked){
+    onSuccess(radio2, '&#10004');
+  } else {
     onError(radio, "Choose your answer!"); 
     window.scrollTo({top: 0, behavior: 'smooth'});
-
-  } else {
-    onSuccess(radio, '&#10004');
+    
   }
 
   /*checkbox validation*/
-  if(this.checked == false){
+
+  if(this.checked = false){
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
     
@@ -108,6 +133,8 @@ function validateInput(){
     onSuccess(checkbox, '&#10004');
     
   }
+
+  
 
 }
 
@@ -167,10 +194,30 @@ function allLetter(input) {
 
 /*submit confirmation function*/
 function confirmSubmit() {
-  var agree = confirm("Redirecting ...")
-  var confirmed = validateInput();
-  if (agree || confirmed === true){
+  if (confirmed === true){
+    confirm("Are you sure to continue?")
     location.replace("submit_confirmation.html");}
   else{
+    alert("Some parts of form are empty!")
   return false ;}
 }
+
+/*validate form
+
+function confirmSubmit() {
+
+  var confirmed = validateInput();
+  if(confirmed == !valid) {
+    alert('Please correct the errors in the form!');
+    return false;
+}
+else {
+    return confirm('Do you really want to submit the form?');
+    location.replace("submit_confirmation.html");
+}
+
+/*
+https://stackoverflow.com/questions/6515502/javascript-form-submit-confirm-or-cancel-submission-dialog-box
+
+*/
+
