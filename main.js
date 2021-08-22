@@ -14,22 +14,20 @@ const radio = document.getElementById('radio');
 const radio1 = document.getElementById('radio1');
 const radio2 = document.getElementById('radio2');
 
-
-
 const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-const checkbox = document.getElementById('checkbox');
-
+const checkbox1 = document.getElementById('checkbox1');
+const checkbox2 = document.getElementById('checkbox2');
+const checkbox3 = document.getElementById('checkbox3');
+const checkbox4 = document.getElementById('checkbox4');
+const checkbox5 = document.getElementById('checkbox5');
+const checkbox6 = document.getElementById('checkbox6');
+const checkbox7 = document.getElementById('checkbox7');
+const checkbox8 = document.getElementById('checkbox8');
+const checkbox9 = document.getElementById('checkbox9');
 
 const textarea = document.getElementById('textarea');
 const submit = document.getElementById('submit');
 
-const confirmed = validateInput();
 
 
 
@@ -123,18 +121,43 @@ function validateInput(){
     
   }
 
+
   /*checkbox validation*/
 
-  if(this.checked = false){
+  if(checkbox.checked) {
+    onSuccess(checkbox, '&#10004');
+
+  } else if (checkbox1.checked) {
+    onSuccess(checkbox1, '&#10004');
+
+  } else if(checkbox2.checked) {
+    onSuccess(checkbox2, '&#10004');
+      
+  } else if (checkbox3.checked) {
+    onSuccess(checkbox3, '&#10004');
+  
+  } else if (checkbox4.checked) {
+    onSuccess(checkbox4, '&#10004');
+  
+  } else if(checkbox5.checked) {
+    onSuccess(checkbox5, '&#10004');
+        
+  } else if (checkbox6.checked) {
+    onSuccess(checkbox6, '&#10004');
+
+  } else if (checkbox7.checked) {
+    onSuccess(checkbox7, '&#10004');
+  
+  } else if(checkbox8.checked) {
+    onSuccess(checkbox8, '&#10004');
+        
+  } else if (checkbox9.checked) {
+    onSuccess(checkbox9, '&#10004');
+
+  } else {
     onError(checkbox, "Select a option!");
     window.scrollIntoView();
-    
-  } else {
-    onSuccess(checkbox, '&#10004');
-    
   }
-
-  
 
 }
 
@@ -192,32 +215,17 @@ function allLetter(input) {
 
 
 
-/*submit confirmation function*/
+/*submit confirmation function
 function confirmSubmit() {
-  if (confirmed === true){
+
+  let confirmed = validateInput();
+  if (confirmed == true){
     confirm("Are you sure to continue?")
     location.replace("submit_confirmation.html");}
   else{
     alert("Some parts of form are empty!")
   return false ;}
 }
-
-/*validate form
-
-function confirmSubmit() {
-
-  var confirmed = validateInput();
-  if(confirmed == !valid) {
-    alert('Please correct the errors in the form!');
-    return false;
-}
-else {
-    return confirm('Do you really want to submit the form?');
-    location.replace("submit_confirmation.html");
-}
-
-/*
-https://stackoverflow.com/questions/6515502/javascript-form-submit-confirm-or-cancel-submission-dialog-box
-
 */
+
 
