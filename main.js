@@ -1,5 +1,6 @@
 
-/*Variables*/
+/* Variables */
+
 const title = document.getElementById('title');
 const surveyForm = document.getElementById('survey-form');
 const description = document.getElementById('description');
@@ -33,12 +34,13 @@ const submit = document.getElementById('submit');
 
 
 
-/*input validation function*/
+/* Input validation function */
+
 function validateInput(){
 
  
-  
   /*first name validation */
+
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -57,7 +59,9 @@ function validateInput(){
 
 
 
-  /*last name validation */
+
+  /* Last name validation */
+
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
     lastName.scrollIntoView();
@@ -75,7 +79,9 @@ function validateInput(){
   }
 
 
-  /*email validation */
+
+  /* Email validation */
+
    if(email.value.trim()===""){
       onError(email, "Your e-mail is missing!");
       email.scrollIntoView();
@@ -90,7 +96,8 @@ function validateInput(){
 
 
 
-  /*age validation */
+  /* Age validation */
+
   if(age.value.trim()===""){
     onError(age, "Write your age here!"); 
    window.scrollTo({top: 0, behavior: 'smooth'});
@@ -108,7 +115,7 @@ function validateInput(){
   }
 
  
-  /*radio button validation*/
+  /* Radio button validation */
 
   if(radio.checked){
     onSuccess(radio, '&#10004');
@@ -125,7 +132,7 @@ function validateInput(){
   }
 
 
-  /*checkbox validation*/
+  /* Checkbox validation */
 
   if(checkbox.checked) {
     onSuccess(checkbox, '&#10004');
@@ -166,6 +173,7 @@ function validateInput(){
 
 }
 
+/* Prevent default behavior */
 
 document.querySelector("button").addEventListener("click", (event)=>{
     event.preventDefault(); 
@@ -174,8 +182,7 @@ document.querySelector("button").addEventListener("click", (event)=>{
 
   
 
-/*submit confirmation*/
-
+/* Submit confirmation */
 function confirmSubmition(){
 
   validateInput();
@@ -186,7 +193,7 @@ function confirmSubmition(){
 
 
 
-/*Succes function*/
+/* Succes function */
 function onSuccess(input, symbol){ 
 
     let parent = input.parentElement; 
