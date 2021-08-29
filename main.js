@@ -31,9 +31,12 @@ const submit = document.getElementById('submit');
 
 
 
+
+
 /*input validation function*/
 function validateInput(){
 
+ 
   
   /*first name validation */
   if(firstName.value.trim()===""){
@@ -159,6 +162,8 @@ function validateInput(){
     window.scrollIntoView();
   }
 
+
+
 }
 
 
@@ -166,6 +171,18 @@ document.querySelector("button").addEventListener("click", (event)=>{
     event.preventDefault(); 
     validateInput(); 
   }); 
+
+  
+
+/*submit confirmation*/
+
+function confirmSubmition(){
+
+  validateInput();
+  confirm("Are you sure to continue?")
+  location.replace("submit_confirmation.html");
+
+}
 
 
 
@@ -215,17 +232,6 @@ function allLetter(input) {
 
 
 
-/*submit confirmation function
-function confirmSubmit() {
 
-  let confirmed = validateInput();
-  if (confirmed == true){
-    confirm("Are you sure to continue?")
-    location.replace("submit_confirmation.html");}
-  else{
-    alert("Some parts of form are empty!")
-  return false ;}
-}
-*/
 
 
