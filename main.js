@@ -31,9 +31,6 @@ const submit = document.getElementById('submit');
 
 
 
-
-
-
 /* Input validation function */
 
 function validateInput(){

@@ -123,7 +123,7 @@
     }
     
     #survey-form {
-        background-color: rgb(8, 127, 140);
+        background-color: rgb(106, 141, 115); 
         margin-top: 5px;
         padding-top: 20px;
         padding-left: 20px;
@@ -152,9 +152,7 @@
        
     }
 
-    #dropdown:focus {
-        border: 1.5px solid rgb(55, 0, 255);
-    }
+ 
 
     
     #checkbox, #checkbox1, #checkbox2, #checkbox3, #checkbox4, #checkbox5, #checkbox6, #checkbox7, #checkbox8, #checkbox9 {
@@ -170,18 +168,22 @@
         padding: 10px;
         margin-bottom: 30px;
         border: none;
-        background-color: orange;
-        color: white;
+        background-color: rgb(255, 232, 194);
+        color: black;
         cursor: pointer;
         transition-duration: 0.5s;;
+        font-family:'Kanit', sans-serif;
+        font-size: 1rem;
     }
     
     button:hover {
-        background-color: yellow;
+        background-color: rgb(240, 168, 104);
         color: black;
         transition-duration: 0.5s;
         font-weight: 700; 
         letter-spacing: 3px;
+        font-family:'Kanit', sans-serif;
+        font-size: 1rem;
         
     }
 
@@ -191,30 +193,28 @@
     input:focus {
         outline: none;
         background-color:white;
-        border: 1.5px solid rgb(55, 0, 255);
-        transition: 0.5s ease-in-out;
+        
     }
 
-    input:focus::after{
-        transition: 0.5s ease-out;
-    }
-
+   
     
     small {
-        color: yellow;
+        color: rgb(244, 253, 217);
         font-size: 0.95rem;
-        text-shadow: 1px 2px black;
+       
     }
 
-
+/*
     .form-control.success input {
-        border: 2px solid black;
+        border: 0.5px solid black;
         
     }
 
     .form-control.error input {
-        border: 3px solid yellow;
+        border: 1px solid black;
     }
+
+    */
 
     .form-control small {
         visibility: hidden;
@@ -243,7 +243,8 @@
         resize: none;
         border-radius: 5px;
         border-style: none;
-        
+        font-family: 'Kanit', sans-serif;
+
     }
     
     
@@ -331,7 +332,7 @@
 
 
 .outter_box {
-    background-color: rgb(8, 127, 140);;
+    background-color: rgb(106, 141, 115);
     margin-top: 135px;
     padding: 30px;
     border-radius: 10px;
@@ -358,7 +359,7 @@ span {
     font-size: 5rem;
     background-color: inherit;
     padding-left: 15px;
-    background-color: rgb(8, 127, 140);;  
+    background-color: rgb(106, 141, 115);  
     
 }
 
