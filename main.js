@@ -32,12 +32,10 @@ const submit = document.getElementById('submit');
 
 
 /* Input validation function */
-
 function validateInput(){
 
  
   /*first name validation */
-
   if(firstName.value.trim()===""){
     onError(firstName, "First Name cannot be empty!");
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -58,7 +56,6 @@ function validateInput(){
 
 
   /* Last name validation */
-
   if(lastName.value.trim()===""){
     onError(lastName, "Last Name cannot be empty!");
     lastName.scrollIntoView();
@@ -78,7 +75,6 @@ function validateInput(){
 
 
   /* Email validation */
-
    if(email.value.trim()===""){
       onError(email, "Your e-mail is missing!");
       email.scrollIntoView();
@@ -94,7 +90,6 @@ function validateInput(){
 
 
   /* Age validation */
-
   if(age.value.trim()===""){
     onError(age, "Write your age here!"); 
    window.scrollTo({top: 0, behavior: 'smooth'});
@@ -113,7 +108,6 @@ function validateInput(){
 
  
   /* Radio button validation */
-
   if(radio.checked){
     onSuccess(radio, '&#10004');
   
@@ -130,7 +124,6 @@ function validateInput(){
 
 
   /* Checkbox validation */
-
   if(checkbox.checked) {
     onSuccess(checkbox, '&#10004');
 
@@ -166,15 +159,14 @@ function validateInput(){
     window.scrollIntoView();
   }
 
-
-
 }
 
 /* Prevent default behavior */
-
 document.querySelector("button").addEventListener("click", (event)=>{
+
     event.preventDefault(); 
     validateInput(); 
+
   }); 
 
   
